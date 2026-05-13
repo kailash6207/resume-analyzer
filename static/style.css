@@ -1,0 +1,139 @@
+/* Forces padding to stay inside the 100% width, fixing the spillover */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px; /* <-- ADD THIS LINE (Default is usually 16px) */
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 36px; /* <-- ADD THIS LINE to make the title pop */
+}
+
+form, .result-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Styles the overall container and the "No file chosen" text */
+input[type="file"] {
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 16px; 
+    color: #555; 
+    font-family: inherit;
+}
+
+/* Styles the actual "Choose File" button itself */
+input[type="file"]::file-selector-button {
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    border: 1px solid #cbd5e1;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+}
+
+/* --- NEW FLOATING TEXTAREA STYLES --- */
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 16px; 
+    resize: vertical;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3498db; /* Matches your Analyze button! */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+/* ------------------------------------ */
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.loader {
+    display: none;
+    margin-top: 15px;
+    color: #7f8c8d;
+}
+
+.score-box {
+    background-color: #e8f8f5;
+    color: #16a085;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+ul {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ecf0f1;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

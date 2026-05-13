@@ -1,0 +1,10 @@
+# Ignore the massive AI Brain folder
+ai_brain/
+
+# Ignore uploaded user resumes
+uploads/
+
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+.env

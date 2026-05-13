@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Analysis Results</h1>
+        
+        <div class="score-box">
+            ATS Score: {{ score }}/100
+        </div>
+
+        <div style="text-align: left;">
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Phone:</strong> {{ phone }}</p>
+            
+            <h3>Skills Detected:</h3>
+            <ul>
+                {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                {% else %}
+                    <li>No recognized skills found.</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Target Skills Matched:</h3>
+            <ul>
+                {% for match in matched %}
+                    <li style="background-color: #d4efdf;">{{ match }}</li>
+                {% else %}
+                    <li>No target skills matched.</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <br>
+        <a href="/">Upload Another Resume</a>
+    </div>
+</body>
+</html>
